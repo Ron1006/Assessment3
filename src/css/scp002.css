@@ -277,6 +277,9 @@ h4{
     cursor: pointer;
     height: 34px;
     width: 34px;
+    background-size: 34px 34px; /* 确保背景图片不会超过这个大小 */
+    background-repeat: no-repeat;
+    background-position: center; /* 使图片居中 */
 }
 #SCP002-thumbUp {
     background-color:#8a4d29 ;
@@ -305,6 +308,12 @@ h4{
     .SCP002-rating {
         margin-top: 20px !important;
         margin: auto;
+    }
+    #SCP002-thumbUp, #SCP002-thumbDown{
+        cursor: pointer;
+        height: 34px;
+        width: 34px;
+
     }
   }
 
@@ -610,10 +619,7 @@ h4{
 }
 @media (max-width: 768px){
     .SCP002-item-class3{
-        height: 200px;
-        width: 200px;
-        margin: auto;
-        margin-top: 50px;
+        display: none;
     }
 }
 
@@ -682,7 +688,7 @@ h4{
 
 .SCP002-SCP002-content{
     margin-top: 20px !important;
-    width: 1056px;
+    padding: 50px;
     margin: auto;
 }
 
@@ -705,11 +711,12 @@ h4{
     }
     .SCP002-content img{
         margin-left: 0px;
-        margin-top: 20px;
-        height: 450px;
+        margin-top: 0px;
+        height: 45px;
     }
     .SCP002-scp002-content{
         width: 80%;
+        padding: 20px;
         margin-top: 400px !important;
     }
 }

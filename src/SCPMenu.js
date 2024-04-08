@@ -47,7 +47,7 @@ function SCPMenu({SCPData, onSelect, onLogoClick}){
                         {
                             SCPData.map(
                                 (SCPData, index) => (
-                                    <li key={index} onClick={()=>onSelect(SCPData)}>
+                                    <li key={index} onClick={() => { onSelect(SCPData); handleMenuClick(); }}>
                                         {SCPData.subject}
                                     </li>
                                 )
