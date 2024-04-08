@@ -3,7 +3,7 @@ import SCPMenu from './SCPMenu';
 import HomePage from './HomePage';
 import {useState, useEffect} from 'react';
 import SCPData from './scp.json';
-import './css/homePage.css';
+//import './css/homePage.css';
 
 function App() {
 
