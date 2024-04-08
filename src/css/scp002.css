@@ -245,7 +245,7 @@ h4{
 
 .SCP002-top-pic{
     height: 924px;
-    background-image: url('../images/scp002bg.jpg');
+    background-image: url('./images/scp002bg.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     border: 1px solid transparent; /* 添加透明边框，防止被子元素影响 */
