@@ -2,8 +2,8 @@
     {
         "id": "002",
         "subject": "SCP-002",
-        "topimage": "/images/scp002bg.jpg",
-        "pic": "/images/test1.jpg",
+        "topimage": "./images/scp002bg.jpg",
+        "pic": "./images/test1.jpg",
         "link":"/SCP002",
         "item": "002",
         "class": "EUCLID",
@@ -16,7 +16,7 @@
     {
         "id": "003",
         "subject": "SCP-003",
-        "topimage": "/images/scp003bg.jpg",
+        "topimage": "./images/scp003bg.jpg",
         "pic": "./images/test2.jpg",
         "link":"/SCP003",
         "item": "003",
@@ -30,7 +30,7 @@
     {
         "id": "004",
         "subject": "SCP-004",
-        "topimage": "/images/scp004bg.jpg",
+        "topimage": "./images/scp004bg.jpg",
         "pic": "./images/test3.jpg",
         "link":"/SCP004",
         "item": "004",
@@ -44,7 +44,7 @@
     {
         "id": "005",
         "subject": "SCP-005",
-        "topimage": "/images/scp005bg.jpg",
+        "topimage": "./images/scp005bg.jpg",
         "pic": "./images/test4.jpg",
         "link":"/SCP005",
         "item": "005",
@@ -58,7 +58,7 @@
     {
         "id": "006",
         "subject": "SCP-006",
-        "topimage": "/images/scp006bg.jpg",
+        "topimage": "./images/scp006bg.jpg",
         "pic": "./images/test5.jpg",
         "link":"/SCP006",
         "item": "006",
