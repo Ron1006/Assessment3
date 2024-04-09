@@ -22,7 +22,7 @@ function SCPDetail({selectedSCP}){
     
     return(
         <div className="SCP002-content">
-            <div className="SCP002-top-pic" style={{ backgroundImage: `url(${selectedSCP.topimage})` }}>
+            <div className="SCP002-top-pic" style={{backgroundImage:`url(${selectedSCP.topimage})`}}>
                 <div className="SCP002-rating">
                     <div id="SCP002-thumbDown" onClick={handleThumbsDownClick}>
                         <img src="./images/thumbdown.png" alt="thumbDown"/>
@@ -38,7 +38,7 @@ function SCPDetail({selectedSCP}){
             <div className="SCP002-item002">
                 <div className="SCP002-item002-1">
                     <h2>ITEM#:</h2>
-                    <h1>002</h1>
+                    <h1>{selectedSCP.id}</h1>
                     <div className="SCP002-item-gap">
                         <span></span>
                         <span></span>
