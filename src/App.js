@@ -32,7 +32,7 @@ function App() {
         }, []
     );
 
-  const [selectSCP, setSelectedSCP] = useState(null); // single object,null mean no object has been choosed
+  const [selectSCP, setSelectedSCP] = useState(null); // single object,null mean no object has been choosed 123
   // const [selectSCP, setSelectedSCP] = useState(SCPData[0]); // default display the first object
   const [showHomePage, setShowHomePage] = useState(true); // control homepage state
 
