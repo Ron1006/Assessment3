@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import UpdateComponent from './UpdateComponent';
 import Modal from './common/Modal'; // popup
 
-import { doc, getDoc, deleteDoc } from 'firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { db } from './fbconfig';
 
 function SCPDetail({selectedSCP}){
@@ -37,26 +37,10 @@ function SCPDetail({selectedSCP}){
         }
     };
 
-    const handleUpdateClick = () => {
-        setEditingID(selectedSCP.id);
-        setModalOpen(true);
-        //handleRefresh();
-    };
     //function to handle data refresh
     const handleRefresh = () => {
+        setEditingID(null); // close the editor view on update
         fetchData(selectedSCP.id); //call this to refresh data
-        window.location.reload();
-    }
-
-    const handleDelete = async (id) => {
-        const docRef = doc(db, "data", id)
-        try{
-            await deleteDoc(docRef);
-            handleRefresh();
-        }
-        catch(error){
-            console.error("Error deleting document: ", error);
-        }
     }
 
     // useEffect(() => {
@@ -168,9 +152,7 @@ function SCPDetail({selectedSCP}){
                 </div>
                 <div className="SCP002-description"><p>{selectedSCP.description}</p></div>
                 <div className="SCP-control">
-                    <button className="SCP002-update" onClick={() => handleUpdateClick(selectedSCP.id)} >Update</button>
-                    <button className="SCP002-delete" onClick={() => handleDelete(selectedSCP.id)}>Delete</button>
-                    <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
+                    <button className="SCP002-update" onClick={() => setEditingID(selectedSCP.id)}>Update</button>
                         {
                             editingId == selectedSCP.id && (
                                 <UpdateComponent 
@@ -186,11 +168,9 @@ function SCPDetail({selectedSCP}){
                                 />
                             )
                         }
-                    </Modal>
-
-
-
-                    
+                    <div id="SCP002-delete">
+                        Delete
+                    </div>
                 </div>
                 
                 <div className="SCP002-refer">

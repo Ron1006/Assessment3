@@ -147,7 +147,7 @@ a{
     font-size: 1.1rem;
     border-radius: 6px;
     width: 100px;
-    height: 36px;
+    height: 16px;
     margin-left: 20px;
     margin-right: 20px;
     padding: 10px 20px;
@@ -209,11 +209,18 @@ a{
         color: rgb(235, 235, 235);
     }
     .search{
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 1.2rem;
         width: 80%;
         height: 6%;
         margin-left: 10%;
+    }
+    .login{
+        margin-top: 10px;
+        width:80%;
+        height:6%;
+        margin-left:10%;
+        padding: 0px;
     }
 }
 
@@ -443,4 +450,20 @@ h3 {
         height: auto;
         
     }
+}
+
+
+.btn-custom {
+    color: white;
+    height: 30px;
+    background-color: #ff2b78; /* 自定义的绿色 */
+    border-color: #ff2b78; /* 边框颜色，如果需要 */
+}
+.btn-custom:hover {
+    color: white;
+    background-color: #ff5996; /* 悬停时的颜色 */
+}
+
+.SCP-control{
+    display: flex;
 }
