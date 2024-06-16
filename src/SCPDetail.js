@@ -215,7 +215,7 @@ function SCPDetail({selectedSCP}){
                             [DATA EXPUNGED]
                             <br/><br/>
                             [DATA EXPUNGED]
-
+n
                         </p>
                     </div>  
                 </div>
