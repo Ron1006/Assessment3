@@ -62,7 +62,6 @@ a{
     height: 100%;
     background-color: #020510;
     flex-direction: column;
-    z-index: 1000;
 }
 
 .header-right {
@@ -157,25 +156,6 @@ a{
     color: white;
     cursor: pointer;
 }
-
-.login2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    width: 100px;
-    height: 16px;
-    margin-left: 20px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #05327a;
-    color: white;
-    cursor: pointer;
-}
-
-
-
 #navMB p {
         line-height: 3;
         height: 80%;
@@ -201,12 +181,13 @@ a{
         display: none;
     }
     #navMB {
-        line-height: 2.5;
+        line-height: 3;
         height: 80%;
-        font-size: 1.1rem !important;
-        margin-top: 6%;
+        font-size: 1.4rem !important;
+        margin-top: 10%;
         margin-left: 10%;
         width: 100%;
+        font-size: 1.1rem;
         display: flex;
         flex-direction: column;
         justify-content: left;
@@ -246,11 +227,9 @@ a{
 .content {
     margin: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     height: 92%;
     width: 100%;
+    border-radius: 20px;
     background: radial-gradient(circle 58vw at 10% 90%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
                 radial-gradient(circle 88vw at 0% 0%, rgba(9,3,28,0.9), #09031c, transparent 60%, transparent),
                 radial-gradient(circle 58vw at 60% 10%, rgba(40,58,88,0.6), #09031c, transparent 60%, transparent),
@@ -262,15 +241,13 @@ a{
 
 
 .left-section {
-    margin-bottom: 30px;
-    padding-top: 30px;
     color: white;
-
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    overflow-y: auto; /* Allows scrolling within this section if needed */
 }
 
 .left-section p{
@@ -311,7 +288,7 @@ h3 {
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
-    line-height: 3
+    line-height: 0
 }
 
 .social-icon{
@@ -324,8 +301,7 @@ h3 {
 
 @media only screen and (min-width: 376px) and (max-width: 768px) {
     .left-section{
-        height: 20%;
-
+        height: 90%;
     }
     .left-section p{
         font-size: 0.8rem;
@@ -398,6 +374,7 @@ h3 {
 
     .content {
         margin: auto;
+        display: flex;
         height: 92%;
         width: 100%;
         border-radius: 20px;
@@ -415,59 +392,44 @@ h3 {
 }
 
 .right-section {
-    max-height: calc(100vh - 350px); /*100vh 表示的是浏览器内部窗口（视口）的100%高度。 调整100px为你的头部和页脚总高度 */
-    width: 100%;
-    display: flex;
+    max-height: calc(100vh - 50px); /*100vh 表示的是浏览器内部窗口（视口）的100%高度。 调整100px为你的头部和页脚总高度 */
+    width: 40%;
+    /*display: flex;*/
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    justify-content:flex-end;
+
     overflow-y: auto; /* Allows scrolling within this section if needed */
     scrollbar-width: none; /* 针对 Firefox 隐藏滚动条 */
 }
-
+/* 针对 Chrome 和 Safari 隐藏滚动条 */
 .right-section::-webkit-scrollbar {
-    display: none; /* 针对 Chrome 和 Safari 隐藏滚动条 */
+    display: none;
 }
 
-.image-container {
-    position: relative;
-    margin-left: 18px;
-    margin-bottom: 48px;
-    width: calc(18% - 10px);
-}
-
-.image-container img {
+.right-section img {
     border-radius: 20px;
-    width: 100%;
-    height: auto;
+    width: calc(50% - 10px);
+    margin-left: 8px;
+    margin-bottom: 8px;
+    height: auto; /* Allows images of different heights */
     cursor: pointer;   
 }
 
-.image-container img:hover {
+.right-section img:hover{
     filter: brightness(120%);
     transition: filter 0.3s ease;
 }
 
-.image-caption {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
+
+
+
+
+
+
 
 /* Media Query for Mobile Devices */
 @media only screen and (max-width: 768px) {
     .content {
-        display: flex;
         flex-direction: column; /* Stack the left and right sections vertically */
     }
     .left-section {
@@ -475,30 +437,24 @@ h3 {
         order: 1; /* Places the left section in the middle */
     }
     .right-section {
-
-        align-items: center; /* Center items horizontally */
-        max-height: 100vh;
+        justify-content:space-evenly;
+        padding: 0px;
         width: 100%;
         order: 2; /* Places the right section at the bottom */
-        padding: 0px;
-        overflow-y: auto; /* Allow vertical scrolling */
-        scrollbar-width: none; /* Hide scrollbar in Firefox */
-    }
-    .right-section::-webkit-scrollbar {
-        display: none; /* Hide scrollbar in Chrome and Safari */
-    }
-    .image-container {
-        width: 40%; /* Take most of the width in mobile view */
+        flex-direction: column; /* Horizontal scrolling for images */
 
-        margin-bottom: 10px; /* Reduce bottom margin */
+       
+        border-radius: 20px;
     }
     .right-section img {
-        width: 100%; /* Ensure images take full width of container */
-        height: auto; /* Maintain aspect ratio */
+        width: calc(50% - 10px);
+        display:inline;
+        margin-bottom: 0px;
+        max-width: 47%; /* Example width for images, you can adjust as needed */
+        height: auto;
+        
     }
 }
-
-
 
 
 .btn-custom {

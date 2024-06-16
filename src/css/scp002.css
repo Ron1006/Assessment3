@@ -251,7 +251,9 @@ h4{
 }
 @media (max-width: 768px) { /* 或其他适合你的移动端断点的宽度 */
     .SCP002-top-pic {
-      height: 600px
+      height: 600px;
+      background-size: 250%; /* 确保背景图片在移动端上缩小 */
+      background-position: top center;
     }
   }
 
@@ -349,13 +351,12 @@ h4{
     font-weight: 100;
     font-size: 28px;
     margin: 0;
-    margin-top: 20px;
+    line-height: 1.5;
 }
 .SCP002-item002-1 p{
     
-    font-size: 24px;
+    font-size: 20px;
     margin: 0;
-    margin-top: 20px;
 }
 
 .SCP002-item002-2{
@@ -382,11 +383,14 @@ h4{
     }
     .SCP002-item002-1 h3{
         white-space: nowrap;
-        font-size: 2.7rem;
+        font-size: 1.2rem;
     }
     .SCP002-item002-3{
         display:block;
         
+    }
+    .SCP002-item002-1 p{
+        font-size:14px;
     }
 }
 
@@ -395,12 +399,12 @@ h4{
     margin-right: 16px;
     font-size: 0;
     height: 63px;
-    width: 646px;
+    width: 526px;
 }
 
 .SCP002-item-gap span{
     margin-top: 5px;
-    width: 646px;
+    width: 526px;
     height: 8px;
     background-color: #271d1d;
     display: inline-block; /* 将display属性设置为inline-block允许你在内联元素上设置宽度和高度，同时保持元素在文本流中的内联行为。 */
@@ -413,6 +417,7 @@ h4{
         width: 60%;
         background-color: #fcf2f2;
         height: 6px;
+        display: none;
     }
 }
 
@@ -665,7 +670,7 @@ h4{
 
 
 .SCP002-contentSCP, .SCP002-containment, .SCP002-description{
-    margin-top: 50px;
+    margin-top: 0px;
     line-height: 1.8;
     display: flex;
 }
@@ -734,7 +739,7 @@ h4{
     .SCP002-scp002-content{
         width: 80%;
         padding: 20px;
-        margin-top: 400px !important;
+        margin-top: 150px !important;
     }
 }
 

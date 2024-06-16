@@ -14,6 +14,7 @@ function SCPMenu({readData, onSelect, onLogoClick}){
 
     const [isMobileNavVisible, setMobileNavVisible] = useState(false)
     const [isModalOpen, setModalOpen] = useState(false); // for create component popup
+    const [isMenuModalOpen, setMenuModalOpen] = useState(false); // for menu
 
     // 处理菜单点击事件,点击显示移动端MENU，！表示反值
     const handleMenuClick = () => {
@@ -30,19 +31,24 @@ function SCPMenu({readData, onSelect, onLogoClick}){
                 </div>
                 <div className="desktop-nav">
                     <div id="nav">
-                        {/* SCPData, index为索引，从0开始 ，item.link是获取json里的link*/}
-                        {
-                            readData.map(
-                                (readData, index) => (
-                                    <span key={index} onClick={()=>onSelect(readData)}>
-                                        {readData.subject}
-                                    </span>
-                                )
-                            )
-                        }
+                    
+                        
                     </div>
                     <div className="header-right">
                         <input type="text" placeholder="Search..." className="search" />
+                        <button className="login2" onClick={() => setMenuModalOpen(true)}>Menu</button>
+                        {/* SCPData, index为索引，从0开始 ，item.link是获取json里的link*/}
+                        <Modal isOpen={isMenuModalOpen} onClose={() => setMenuModalOpen(false)} className="menu-modal">
+                            {
+                                readData.map(
+                                    (readData, index) => (
+                                        <span key={index} onClick={()=>onSelect(readData)}>
+                                            {readData.subject}
+                                        </span>
+                                    )
+                                )
+                            }
+                        </Modal>
                         <button className="login" onClick={() => setModalOpen(true)}>Create</button>
                         <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)}>
                             <CreateComponent />

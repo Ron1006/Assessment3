@@ -207,17 +207,15 @@ function SCPDetail({selectedSCP}){
                     <div className="SCP002-report2-text">
                         <p>Mulhausen Report [00.023.603]<br/><br/>
                             The following is a brief report detailing the discovery of SCP-002<br/><br/>      
-                            1
+                            The first contact was with SCP-7003-1 on March 20th, 2087, after the siege of the Patriot's Eastern Blockade failed. The encounter was recorded after the activation of Endal Emergency Distress Beacon, ID #41551. Transcript is below.
                             <br/><br/>
-                            1.
+                            After an exhaustive multi-week long search, SCP-7003-1 was tracked 14 kilometers southwest of Foundation Stronghold-4, located in the northeastern American region of the Coalition of North American Nations7 (CNAN). During the search, SCP-7003-1 generally moved away from personnel, also demonstrating an ability to de-manifest if threatened or approached too closely. These simple rules laid the groundwork for corralling the anomaly. The Foundation set about to collect and distribute water amongst the highest priority populations and defense forces. Rain is not continuous, but it is without a doubt more common near SCP-7003-1 than anywhere else.
                             <br/><br/>
-                            1.
-                            <br/><br/>
+
                             [DATA EXPUNGED]
                             <br/><br/>
                             [DATA EXPUNGED]
-                            <br/><br/>
-                            1.
+
                         </p>
                     </div>  
                 </div>

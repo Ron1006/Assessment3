@@ -15,26 +15,29 @@ function HomePage({readData, onSelect}){
                     <h1>CLASSIFIED</h1>
                     <p>UNAUTHORIZED PERSONNEL WILL BE</p>
                     <h3>TRACKED, LOCATED, AND DETAINED</h3>
-                    <div className="social-icon">
+                    {/* <div className="social-icon">
                         
                         <img src={icon1} alt="icon" />
                         <img src={icon2} alt="icon" />
                         <img src={icon3} alt="icon" />
                         <img src={icon4} alt="icon" />
-                    </div>
+                    </div> */}
                     </div>
                     <div className="right-section">
-                        {readData.map((readData, index) =>(     
+                        {readData.map((readData, index) => (     
+                            <div className="image-container" key={index}>
                                 <img 
-                                    key={index} 
                                     src={`${readData.pic}`} 
                                     alt={readData.subject} 
-                                    onClick={()=>onSelect(readData)} 
+                                    onClick={() => onSelect(readData)} 
                                 />
-                            //使用require来动态导入图片
+                                <div className="image-caption">
+                                    {readData.subject}
+                                </div>
+                            </div>
                         ))}
-                        
                     </div>
+
                 </div>
         </div>
     );
