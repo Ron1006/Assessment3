@@ -44,6 +44,7 @@ function App() {
   const handleLogoClick = () => {
     setShowHomePage(true);
     setSelectedSCP(null);
+    setSelectedSCP(false);
   }
 
   return (
