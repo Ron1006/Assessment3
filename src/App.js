@@ -1,10 +1,10 @@
 import SCPDetail from './SCPDetail';
 import SCPMenu from './SCPMenu';
 import HomePage from './HomePage';
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
-import {collection, getDocs} from 'firebase/firestore'
-import {db} from './fbconfig';
+import { collection, getDocs } from 'firebase/firestore'
+import { db } from './fbconfig';
 //import './css/homePage.css';
 
 
@@ -12,25 +12,25 @@ import {db} from './fbconfig';
 function App() {
 
   const ourCollection = collection(db, "data");
-    const [readData, setReadData] = useState([]);
+  const [readData, setReadData] = useState([]);
 
-    useEffect(
-        () => {
+  useEffect(
+    () => {
 
-            const fetchData = async() => {
-                try{
-                    const snapshot = await getDocs(ourCollection);
-                    setReadData(
-                        snapshot.docs.map(doc => ({...doc.data(), id: doc.id}))
-                    );
-                }
-                catch(error){
-                    console.error("Error fetching data: ", error)
-                }
-            }
-            fetchData();
-        }, []
-    );
+      const fetchData = async () => {
+        try {
+          const snapshot = await getDocs(ourCollection);
+          setReadData(
+            snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id }))
+          );
+        }
+        catch (error) {
+          console.error("Error fetching data: ", error)
+        }
+      }
+      fetchData();
+    }, []
+  );
 
   const [selectSCP, setSelectedSCP] = useState(null); // single object,null mean no object has been choosed 123
   // const [selectSCP, setSelectedSCP] = useState(SCPData[0]); // default display the first object
@@ -49,7 +49,7 @@ function App() {
   return (
     <div className='app-container'>
       <SCPMenu readData={readData} onSelect={handleSelectSCP} onLogoClick={handleLogoClick} />
-      {showHomePage &&<HomePage readData={readData} onSelect={handleSelectSCP} />}
+      {showHomePage && <HomePage readData={readData} onSelect={handleSelectSCP} />}
       {selectSCP && <SCPDetail selectedSCP={selectSCP} />}
     </div>
   );
