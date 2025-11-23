@@ -42,7 +42,7 @@ function App() {
   }//onSelect之后，会给const handleselectSCP传送一个scp的值，然后把这个值赋予setSelectedSCP
 
   const handleLogoClick = () => {
-    setShowHomePage(false);
+    setShowHomePage(true);
     setSelectedSCP(null);
     setSelectedSCP(false);
   }
